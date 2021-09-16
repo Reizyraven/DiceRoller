@@ -1,11 +1,10 @@
 let diceAmount = 4;
-//let displayDice = true;
 let counter = 0;
 
 for (let index = 0; index <= diceAmount; index++) {
   let diceName = "dice" + index.toString();
   console.log(diceName);
-  $( '.dice' ).append("<a onclick = 'diceSelect('diceName')'><div id = '" + diceName + "'><ol class='die-list even-roll' data-roll='1' id='die-2'> <li class='die-item' data-side='1'> <span class='dot'></span> </li> <li class='die-item' data-side='2'> <span class='dot'></span> <span class='dot'></span> </li> <li class='die-item' data-side='3'> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> </li> <li class='die-item' data-side='4'> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> </li> <li class='die-item' data-side='5'> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> </li> <li class='die-item' data-side='6'> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> </li> </ol> </div> </a>");
+  $( '.dice' ).append("<a onclick = 'diceSelect('diceName')'><div id = '" + diceName + "'><ol class='die-list even-roll' data-roll='1' id='die-2'> <li class='die-item' data-side='1' id = 'side-1'></li> <li class='die-item' data-side='2'id = 'side-2'></li><li class='die-item' data-side='3' id = 'side-3'></li><li class='die-item' data-side='4' id = 'side-4'></li> <li class='die-item' data-side='5' id = 'side-5'></li><li class='die-item' data-side='6' id = 'side-6'></li></ol></div></a>");
 } 
 
 while (counter >= 2) {
@@ -49,8 +48,9 @@ function rollDice() {
   }
 
   function addDice(toggleDice) {
+    let diceName = "dice";
     if(diceAmount == 4){
-      $( '.dice' ).append("<ol class='die-list even-roll' data-roll='1' id='die-2'> <li class='die-item' data-side='1'> <span class='dot'></span> </li> <li class='die-item' data-side='2'> <span class='dot'></span> <span class='dot'></span> </li> <li class='die-item' data-side='3'> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> </li> <li class='die-item' data-side='4'> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> </li> <li class='die-item' data-side='5'> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> </li> <li class='die-item' data-side='6'> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> </li> </ol>");
+      $( '.dice' ).append("<a onclick = 'diceSelect('diceName')'><div id = '" + diceName + "'><ol class='die-list even-roll' data-roll='1' id='die-2'> <li class='die-item' data-side='1' id = 'ex-side-1'></li> <li class='die-item' data-side='2'id = 'ex-side-2'></li><li class='die-item' data-side='3' id = 'ex-side-3'></li><li class='die-item' data-side='4' id = 'ex-side-4'></li> <li class='die-item' data-side='5' id = 'ex-side-5'></li><li class='die-item' data-side='6' id = 'ex-side-6'></li></ol></div></a>");
       diceAmount++;
       //displayDice = false;
       document.getElementById(toggleDice).style.backgroundColor = '#4de34d';
@@ -63,8 +63,9 @@ function rollDice() {
     }
   }
   function addSecondDice(toggleDice) {
+    let diceName = "dice";
     if(diceAmount == 5){
-      $( '.dice' ).append("<ol class='die-list even-roll' data-roll='1' id='die-2'> <li class='die-item' data-side='1'> <span class='dot'></span> </li> <li class='die-item' data-side='2'> <span class='dot'></span> <span class='dot'></span> </li> <li class='die-item' data-side='3'> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> </li> <li class='die-item' data-side='4'> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> </li> <li class='die-item' data-side='5'> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> </li> <li class='die-item' data-side='6'> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> <span class='dot'></span> </li> </ol>");
+      $( '.dice' ).append("<a onclick = 'diceSelect('diceName')'><div id = '" + diceName + "'><ol class='die-list even-roll' data-roll='1' id='die-2'> <li class='die-item' data-side='1' id = 'ex-side-1'></li> <li class='die-item' data-side='2' id = 'ex-side-2'></li><li class='die-item' data-side='3' id = 'ex-side-3'></li><li class='die-item' data-side='4' id = 'ex-side-4'></li> <li class='die-item' data-side='5' id = 'ex-side-5'></li><li class='die-item' data-side='6' id = 'ex-side-6'></li></ol></div></a>");
       diceAmount++;
       //displayDice = false;
       document.getElementById(toggleDice).style.backgroundColor = '#4de34d';
