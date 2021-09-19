@@ -7,7 +7,7 @@
     font-family: system-ui, sans-serif;
   }
   body {
-    background: linear-gradient(#545454, #454545, #676767);
+    background: radial-gradient( #454545, #000);
     display: grid;
     grid-template-columns: 1fr;
     height: 100vh;
@@ -208,9 +208,9 @@
     align-self: center;
     border: none;
     color: green;
-    background-image: radial-gradient(#262525, #000);
+    background-image: radial-gradient(#181717, #000);
     font-size: 1.25rem;
-    font-weight: 700;
+    font-weight: 800;
     justify-self: center;
     padding: 0.5rem 1rem;
   }
@@ -221,18 +221,29 @@
     display: inline-block;
     margin-left: .5rem;
     color: green;
-    background-image: radial-gradient(#262525, #000);
+    background-image: radial-gradient(#181717, #000);
   }
   #plusTwo{
     display: inline-block;
     margin-left: .5rem;
     color: green;
-    background-image: radial-gradient(#262525, #000);
+    background-image: radial-gradient(#181717, #000);
   }
   #buttonGroup{
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  #restartGroup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #restart-button{
+    display: none;
+    margin-left: .5rem;
+    color: green;
+    background-image: radial-gradient(#181717, #000);
   }
   .selected{
     background-color: green;
