@@ -1,9 +1,0 @@
-Kings of tokyo Dice app requirments:
-
-The user has upto 3 rolls before their final results. 
-During the roll they may select or unselect the dice they wish to "keep" from re-rolling. 
-They have 6 dice in total that maybe rolled during each roll.
-During the game some players may have specialty cards which will allow them to add upto 2 additional bonus dice(the green textured bonus dice)
-the additional dice added will act as extra dice and respond in the same fashion as the regular dice function. 
-There must be a restart button to reset the dice rolling system. 
-There should be message printed after each roll such as "You have x amount of spins left!" 
